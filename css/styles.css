@@ -1,0 +1,136 @@
+.mySkills {
+    text-align: center;
+  }
+  
+  .flexContainer {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .flexContainer > div {
+    flex: 1;
+    margin: 0 10px;
+    text-align: left;
+  }
+  .myWork {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .workGrid {
+    display: grid;
+    grid-template-areas:
+      "image1 content1"
+      "image2 content2"
+      "viewAll viewAll";
+    grid-template-rows: 1fr 1fr 40px;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .workGrid > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+  }
+  
+  .workGrid img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  h1, h3 {
+    margin-bottom: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
+  
+  /* Apply grid areas to the divs inside the grid container */
+  .workGrid > div:nth-child(1) {
+    grid-area: image1;
+  }
+  
+  .workGrid > div:nth-child(2) {
+    grid-area: content1;
+  }
+  
+  .workGrid > div:nth-child(3) {
+    grid-area: image2;
+  }
+  
+  .workGrid > div:nth-child(4) {
+    grid-area: content2;
+  }
+  
+  .workGrid > div:nth-child(5) {
+    grid-area: viewAll;
+  }
+  
+  /* HTML comment */
+  .myWork::before {
+    content: "My Work Section Constructed using CSS Grid";
+    display: block;
+    margin-bottom: 20px;
+    font-style: italic;
+  }
+  @media (max-width: 600px) {
+    .workGrid {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .workGrid > div {
+      width: 100%;
+    }
+  
+    .workGrid {
+      grid-template-areas:
+        "image1"
+        "content1"
+        "image2"
+        "content2"
+        "viewAll";
+      grid-template-rows: auto;
+      grid-template-columns: 1fr;
+    }
+    
+  }
+  @media (max-width: 600px) {
+    .mySkills {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .mySkills h1 {
+      margin-bottom: 20px;
+    }
+  
+    .mySkills .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+  
+    .mySkills .container > div {
+      width: 100%;
+    }
+  }
