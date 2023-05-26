@@ -134,3 +134,10 @@
       width: 100%;
     }
   }
+.workGrid div:nth-child(1) img {
+  width: 40%; /* Set the width to 100% to match the container */
+}
+
+.workGrid div:nth-child(3) img {
+  width: 100%; /* Set the width to 100% to match the container */
+}
